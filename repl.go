@@ -47,6 +47,7 @@ func repl() {
 	cmds.register("follow", middlewareLoggedIn(FollowHandler))
 	cmds.register("unfollow", middlewareLoggedIn(UnfollowHandler))
 	cmds.register("following", middlewareLoggedIn(FollowingHandler))
+	cmds.register("browse", middlewareLoggedIn(BrowseHandler))
 
 	if len(os.Args) < 2 {
 		log.Fatal("Usage: cli <command> [args...]")
