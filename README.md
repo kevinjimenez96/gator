@@ -26,14 +26,35 @@ Update the values as needed for your environment.
 
 ## Usage
 
-Run the program with:
+Create a new user:
 
-```sh
-gator
+```bash
+gator register <name>
 ```
 
-Some useful commands:
+Add a feed:
 
-- `gator register <username>` – Add new username.
-- `gator login <username>` – Logs-in with username.
-- `gator addfeed <name> <url>` – Add a new rss feed
+```bash
+gator addfeed <url>
+```
+
+Start the aggregator:
+
+```bash
+gator agg 30s
+```
+
+View the posts:
+
+```bash
+gator browse [limit]
+```
+
+There are a few other commands you'll need as well:
+
+- `gator login <name>` - Log in as a user that already exists
+- `gator users` - List all users
+- `gator feeds` - List all feeds
+- `gator follow <url>` - Follow a feed that already exists in the database
+- `gator unfollow <url>` - Unfollow a feed that already exists in the database
+
